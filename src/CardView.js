@@ -15,7 +15,7 @@ const BASE_SIZE = { width: 300, height: 190 };
 const s = StyleSheet.create({
   cardContainer: {},
   cardFace: {
-  borderRadius:20
+
   },
   icon: {
     position: "absolute",
@@ -134,7 +134,7 @@ export default class CardView extends Component {
             clickable={false}
             flip={shouldFlip}>
           <Image style={[BASE_SIZE, s.cardFace, transform]}
-              source={{uri:"https://github.com/garrettmac/portPal/blob/master/src/assets/images/octopus-vomit.gif"}}>
+              source={imageFront}>
               <Image style={[s.icon]}
                   source={{ uri: Icons[brand] }} />
               <Text style={[s.baseText, { fontFamily }, s.number, !number && s.placeholder, focused === "number" && s.focused]}>
